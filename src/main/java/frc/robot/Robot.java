@@ -44,7 +44,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-    drive.drive(m_joyStick.getZ()*0.45, m_joyStick.getY()*0.60);
+    drive.drive(m_joyStick.getZ()*0.45, m_joyStick.getY()*0.45);
 
   if (m_joyStick.getRawButtonPressed(6))
   {
@@ -76,10 +76,12 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousPeriodic(){
     
-    limelight.update();
-    limelight.dashboard();
 
-    drive.drive(limelight.pid(limelight.x), -0.32);
+
+
+    //limelight.update();
+    //limelight.dashboard();
+    //drive.drive(limelight.pid(limelight.x), -0.32);
     
   }
 }
